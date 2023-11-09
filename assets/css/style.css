@@ -54,7 +54,7 @@ button {
   background: transparent;
   border: none;
   color: var(--color-primay);
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   align-items: center;
   cursor: pointer;
@@ -97,15 +97,15 @@ main {
   bottom: 0;
   width: 100%;
   min-height: 100hv;
-   /* background-color:#000; */
-  background-color:#fff;
+   background-color:#000;
+  /* background-color:#fff; */
   z-index: 102;
   display: flex;
   justify-content: center;
   align-items: center;
   opacity: 1;
   visibility: visible;
-  /* transition: opacity .2s ease-in-out; */
+  transition: opacity .4s ease-in-out;
 }
 
 .loader img {
@@ -477,12 +477,36 @@ main {
   background-color: var(--color-secundary);
   color: var(--color-primay);
   padding: 40px;
-  text-align: center;
+  /* text-align: center; */
+ font-size: 20px;
+ padding-bottom: 8px;
 }
 
 .footer p {
   margin: 0;
+ 
 }
+
+.footer__buttons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+
+
+}
+
+
+.footer__buttons button{ 
+  font-size: 40px;
+ min-width: 400px;
+ display: flex;
+ justify-content: space-around;
+  /* flex-direction: column; */
+ 
+}
+
+/* progress */
 
 .progress {
   position: fixed;
@@ -535,6 +559,11 @@ main {
 
   .show__menu {
     left: 0;
+  }
+
+  .footer p {
+    text-align: center;
+   
   }
 }
 
