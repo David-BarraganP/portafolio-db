@@ -53,7 +53,7 @@ a {
 button {
   background: transparent;
   border: none;
-  /* color: var(--color-primay); */
+  color: var(--color-primay);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -87,7 +87,7 @@ main {
 }
 
 
-/* loader */
+/* loader  mientras  acragar la pagina*/
 
 .loader {
   position: fixed;
@@ -97,11 +97,15 @@ main {
   bottom: 0;
   width: 100%;
   min-height: 100hv;
-  background-color:#fbfbfb;
+   /* background-color:#000; */
+  background-color:#fff;
   z-index: 102;
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 1;
+  visibility: visible;
+  /* transition: opacity .2s ease-in-out; */
 }
 
 .loader img {
@@ -126,6 +130,8 @@ main {
 .header i {
   font-size: 28px;
 }
+
+
 
 .header__nav {
   /* max-width: 1024px; */
@@ -224,11 +230,15 @@ main {
 }
 
 .hero__tag {
-  opacity: 0.6;
+  opacity: 0.5;
 }
 
 .hero__text {
   color: var(--color-primay);
+  font-size: 30px;
+  font-weight:600 ;
+  margin: 0px 10px;
+  
 }
 
 .hero__title {
@@ -564,6 +574,13 @@ main {
   .header__nav {
     height: 100px;
   }
+
+  .hero__text {
+    font-size: 50px;
+    font-weight:600 ;
+    margin: 0px 10px;
+
+  }
 }
 
 /* desktops */
@@ -586,6 +603,13 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  .hero__text {
+    font-size: 50px;
+    font-weight:600 ;
+    margin: 0px 10px;
+
   }
 
 

@@ -211,7 +211,7 @@ SR.reveal('.contact .container', {
 })
 
 
-// louder cargar de un documento
+// loader cargar de un documento
 // loading,interactvie, complete
 
 
