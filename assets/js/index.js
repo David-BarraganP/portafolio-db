@@ -211,6 +211,14 @@ SR.reveal('.contact .container', {
 })
 
 
+SR.reveal('.last__text', {
+  duration: 1000,
+  origin: 'left',
+  distance: '300px',
+  // reset: true,
+})
+
+
 // loader cargar de un documento
 // loading,interactvie, complete
 
