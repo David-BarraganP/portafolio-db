@@ -135,12 +135,12 @@ const swiper = new Swiper('.reviews .swiper', {
 
   breakpoints: {
     768: {
-      slidesPerView: 2,
+      slidesPerView: 1,
       spaceBetween: 15,
     },
 
     1024: {
-      slidesPerView: 1,
+      slidesPerView: 3,
       spaceBetween: 25,
     },
   },
