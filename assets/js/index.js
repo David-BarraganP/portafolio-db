@@ -80,22 +80,24 @@ progress.style.width = Math.round(progreso * 100) + '%'
 })
 
 
+// 
+
 const form = document.getElementById('form')
 
 form.addEventListener('submit', function (e) {
   e.preventDefault()
 
-
+  
   //forma nueva de hacerlo//
 
-  const formData = new FormData(this)
-
-  console.log({
-    name: formData.get('name'),
-    email: formData.get('email'),
-    message: formData.get('message')
-  })
-
+  // const formData = new FormData(this)
+  
+  // console.log({
+  //   name: formData.get('name'),
+  //   email: formData.get('email'),
+  //   message: formData.get('message')
+  // })
+  
 // forma tradicional//
 
   // console.log(e.target.elements)
@@ -108,14 +110,58 @@ form.addEventListener('submit', function (e) {
 //   })
 
 
+
+
+// forma de hacer
+
+const input = this.elements
+
+  const dataForm = {
+    nombre: input.name.value,
+    correo: input.email.value,
+    mensaje: input.message.value
+  }
+
+  const URL = 'https://formsubmit.co/ajax/'
+  const email = 'david25barragan@gmail.com'
+
+  // CRUD -> Create, Read, Update, Delete
+  // verbos:  POST,   GET,  PUT,    DELETE
+
+  fetch(URL + email, {
+    method: "POST",
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+    },
+    body: JSON.stringify(dataForm)
+  })
+  
+    .then(response => response.json())
+
+    .then(data => {
+      document.querySelector('.message--success').classList.remove('hidden')
+      form.reset()
+
+      setTimeout(() => {
+        document.querySelector('.message--success').classList.add('hidden')
+      }, 3000)
+    })
+    .catch(error => {
+      document.querySelector('.message--error').classList.remove('hidden')
+
+      setTimeout(() => {
+        document.querySelector('.message--error').classList.add('hidden')
+      }, 3000)
+    })
 })
 
 
 // swiper pasar paragraf
 
 
-
-const swiper = new Swiper('.reviews .swiper', {
+// const swiper = new Swiper('.reviews .swiper',
+const swiper = new Swiper('.reviews .swiper',{
  // Optional parameters
   // loop: true,
   slidesPerView: 1,

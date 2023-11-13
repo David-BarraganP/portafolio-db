@@ -529,6 +529,35 @@ font-weight: 600;
   z-index: 101;
 }
 
+.message--success {
+  background-color: rgb(205, 236, 197);
+  color: rgb(88, 140, 197);
+  padding: 10px;
+  border-radius: 5px 5px 5px 5px;
+  display: inline-block;
+}
+
+.message--error {
+  background-color: rgb(255, 205, 205);
+  color: rgb(140, 74, 74);
+  padding: 10px;
+  border-radius: 5px 5px 5px 5px;
+  display: inline-block;
+
+
+}
+
+
+.message--success.hidden,
+.message--error.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+
+
+
+
 /* @mdeiacuaris */
 
 /* movile */
